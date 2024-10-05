@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title class='titre'>VITE MON PLEIN</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- Picnic CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+	<!-- Leaflet (pour le Géoportail) -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<!-- Nos affaires -->
+	<link rel="stylesheet" href="index.css" >
+	<script src="index.js"></script>
+</head>
+
+<header class="en-tete">
+	<b class="titre"> Vite mon plein</b>
+</header>
+
+
+<body>
+    
+	<div class="Conteneur">
+		
+		<div class='entrees_user'> 
+			<div class='1entree'>
+        		<br><span class='entrees'>Rayon d'action :</span>
+        		<input id='rayon_d_action' type='number' style='width:4em'> km 
+    		</div>
+    		<div class='1entree'>
+        		<br><span class='entrees'>Consommation :</span>
+        		<input id='consommation' type='number' style='width:3em'> L/100km
+    		</div>
+    		<div class='1entree'>
+        		<br><span class='entrees'>Volume du plein :</span>
+        		<input id='volume' type='number' style='width:4em'> L<br><br>
+    		</div>
+		</div>
+
+		<div id='Choix'>
+			<div class='boite_boutons_choix'>
+				<p class='sous-titre'>Choix du carburant:</p>
+				<div class='boite_boutons'>
+					<div class='calcul'><button class='calculer' value='price_sp95'>SP95 E5</button></div>
+					<div class='calcul'><button class='calculer' value='price_e10'>SP95 E10</button></div>
+					<div class='calcul'><button class='calculer' value='price_sp98'>SP98</button></div>
+					<div class='calcul'><button class='calculer' value='price_gazole'>DIESEL</button></div>
+					<div class='calcul'><button class='calculer' value='price_e85'>E85</button></div>
+					<div class='calcul'><button class='calculer' value='price_gplc'>GPL</button></div>
+				</div>
+			</div>				
+		</div>	    
+	    	        
+	    <div id="Infos">
+            <p class='sous-titre'>Résultats</p>
+            <div class="resultats">
+    			<hr class='separateur'>
+    			<span id='texte'></span>
+    			<hr class='separateur'>
+			</div>
+			<div class='coord' >
+			    <span>Latitude :</span>
+    		    <span id='latitude'></span>
+    		    <br>
+    		    <span>Longitude :</span>
+    			<span id='longitude'></span>
+    			<hr class='separateur'>
+			</div>
+		</div>
+		
+		<div id="Carte"></div>
+	   	    
+	    
+		
+		
+	</div>
+	
+	
+</body>
+
+<footer>
+	<a href="#" class="btn btn-primary">Haut de page ↑</a>
+</footer>
+
+</html>
+
+
+
+
+
